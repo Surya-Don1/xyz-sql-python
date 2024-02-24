@@ -1,4 +1,4 @@
-# ------------------------- follow for the sql results ---------------------
+# ------------- follow for the sql results -----------
 
 # install sqlite db on mac using below command in terminal
 brew install sqlite
@@ -16,7 +16,7 @@ INSERT INTO items (item_name) VALUES ('x'), ('y'), ('z');
 INSERT INTO customers (customer_id, age) VALUES (1, 21), (2, 23), (3, 35);
 
 # similerly insert remaining data and run the query.sql file to get the result
-# -----------------------------------------------------------------------------
+# -----------------------------------------------------
 
-# --------------------------- follow for the python results -------------------
+# ------------- follow for the python results ---------
 run query-python.py file to get and save results to the csv file with ';' seperator
