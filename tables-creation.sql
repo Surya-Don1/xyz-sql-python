@@ -1,30 +1,30 @@
-CREATE TABLE customer (
-  customer_id INTEGER PRIMARY KEY,
-  age INTEGER
+create table customer (
+  customer_id integer primary key,
+  age integer
 );
 
-CREATE TABLE sales (
-  sales_id INTEGER PRIMARY KEY,
-  customer_id INTEGER,
-  FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+create table sales (
+  sales_id integer primary key,
+  customer_id integer,
+  foreign key (customer_id) references customer(customer_id)
 );
 
-CREATE TABLE items (
-  item_id INTEGER PRIMARY KEY,
-  item_name TEXT
+create table items (
+  item_id integer primary key,
+  item_name text
 );
 
-CREATE TABLE orders (
-  order_id INTEGER PRIMARY KEY,
-  sales_id INTEGER,
---   item_id INTEGER,
-  FOREIGN KEY (sales_id) REFERENCES sales(sales_id)
+create table orders (
+  order_id integer primary key,
+  sales_id integer,
+--   item_id integer,
+  foreign key (sales_id) references sales(sales_id)
 );
 
-CREATE TABLE sales_items (
-  order_id INTEGER,
-  item_id INTEGER,
-  quantity INTEGER,
-  FOREIGN KEY (order_id) REFERENCES orders(order_id),
-  FOREIGN KEY (item_id) REFERENCES items(item_id)
+create table sales_items (
+  order_id integer,
+  item_id integer,
+  quantity integer,
+  foreign key (order_id) references orders(order_id),
+  foreign key (item_id) references items(item_id)
 );
